@@ -1,0 +1,39 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Map with Leaflet</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  </head>
+  <body>
+    <button id="toggleBtn">☰</button>
+    <div id="sidebar" class="sidebar hidden">
+      <div class="sidebar-card hero-card" style="background-image: url('https://raw.githubusercontent.com/Hrishii67/BharatNaksha/main/TerraquaUAV/Banner%20Picture.jpg');">
+        <div class="hero-text">Incredible India!</div>
+      </div>
+      
+        <input type="text" id="stateSearch" placeholder="Search state..." class="search-bar" />
+        <div id="suggestions"></div>
+        <div class="sidebar-card" id="total-states">Total States & Provinces: 0</div>
+        <div class="sidebar-card" id="state">Sate Name</div>
+        <div class="sidebar-card" id="state-stats">State Statistics</div>
+        <div class="sidebar-card" id="state-unique">State Uniqueness</div>
+        <div class="sidebar-card" id="surrounding-states">Surrounding States</div>
+      </div>
+    <div id="map"></div>
+    <svg width="0" height="0">
+      <defs>
+        <pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="6" height="6">
+          <path d="M0,6 l6,-6" stroke="#333" stroke-width="1" />
+        </pattern>
+      </defs>
+    </svg>
+    
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/@turf/turf@6.5.0/turf.min.js"></script>
+    
+    <script src="app.js"></script>
+  </body>
+</html>
