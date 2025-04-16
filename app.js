@@ -79,7 +79,7 @@ fetch('https://raw.githubusercontent.com/Hrishii67/BharatNaksha/main/Data/Indian
   .then(response => response.json())
   .then(data => {
     allFeatures = allFeatures.concat(data.features);
-    document.getElementById('total-states').innerText = `Total States & Provinces: ${allFeatures.length}`;
+    document.getElementById('total-states').innerText = `Total States & Union Territories: 36`;
     geojson = L.geoJSON(data, {
       style: {
         color: '#FFCC00',
@@ -101,8 +101,8 @@ fetch('https://raw.githubusercontent.com/Hrishii67/BharatNaksha/main/Data/Indian
 
             document.getElementById('state').innerText = `State Name: ${props.Name}`;
             document.getElementById('state-stats').innerText = `Population: ${props.Population} people`;
-            document.getElementById('surrounding-states').innerText = `Random States: ${randomStates.join(', ')}`;
-            document.getElementById('state-unique').innerText = `Famous for: ${props["Famous For"]}`;
+            document.getElementById('surrounding-states').innerText = `Other States: ${randomStates.join(', ')}`;
+            document.getElementById('state-unique').innerText = `Spotlight On: ${props["Famous For"]}`;
             document.getElementById('sidebar').classList.add('visible');
           },
           mouseover: function (e) {
@@ -150,8 +150,8 @@ fetch('https://raw.githubusercontent.com/Hrishii67/BharatNaksha/main/Data/Indian
 
             document.getElementById('state').innerText = `State Name: ${props.Name}`;
             document.getElementById('state-stats').innerText = `Population: ${props.Population} people`;
-            document.getElementById('surrounding-states').innerText = `Random States: ${randomStates.join(', ')}`;
-            document.getElementById('state-unique').innerText = `Famous for: ${props["Famous For"]}`;
+            document.getElementById('surrounding-states').innerText = `Other States: ${randomStates.join(', ')}`;
+            document.getElementById('state-unique').innerText = `Spotlight On: ${props["Famous For"]}`;
             document.getElementById('sidebar').classList.add('visible');
           },
           mouseover: function (e) {
@@ -218,8 +218,8 @@ function triggerSearch(query) {
 
           document.getElementById('state').innerText = `State Name: ${props.Name}`;
           document.getElementById('state-stats').innerText = `Population: ${props.Population} people`;
-          document.getElementById('surrounding-states').innerText = `Random States: ${randomStates.join(', ')}`;
-          document.getElementById('state-unique').innerText = `Famous for: ${props["Famous For"]}`;
+          document.getElementById('surrounding-states').innerText = `Other States: ${randomStates.join(', ')}`;
+          document.getElementById('state-unique').innerText = `Spotlight On: ${props["Famous For"]}`;
 
           document.getElementById('sidebar').classList.add('visible');
         }
