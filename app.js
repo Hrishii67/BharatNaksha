@@ -29,10 +29,8 @@ style.textContent = `
 document.head.appendChild(style);
 
 function updateHatchColor(color) {
-    // Find the existing pattern
     const pattern = document.querySelector('#diagonalHatch');
     if (pattern) {
-      // Find all lines in the pattern and update their stroke color
       const lines = pattern.querySelectorAll('line, path');
       lines.forEach(line => {
         line.setAttribute('stroke', color);
